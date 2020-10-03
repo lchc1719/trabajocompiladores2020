@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Lenguaje Formales</title>
+	<link rel="stylesheet" type="text/css" href="css/estiloss.css">
+</head>
+<body style="padding: 20px">
+	<h1 class="title">Teoría de los Lenguajes Formales</h1>
+	<div class="tabContainer">
+		<div class="buttonContainer">
+			<button onclick="showPanel(0,'#F14517')">Alfabeto</button>
+			<button onclick="showPanel(1,'#F14517')">Lenguaje</button>
+			<button onclick="showPanel(2,'#F14517')">Palabra</button>
+		</div>
+		<div class="tabPanel" id="cajaalfa">
+			<input type="text" class="conjunto" id="conjuntoalfa" placeholder="Ingrese el alfabeto A">
+			<input type="text" class="conjunto1" id="conjuntalfa1" placeholder="Ingrese el alfabeto B">
+			<button class="unionalfa" id="unionalfa" onclick="union(0)">UNION</button>
+			<button class="diferenciaalfa" id="diferenciaalfa" onclick="diferencia(0)">DIFERENCIA</button>
+			<button class="interseccionalfa" id="interseccionalfa" onclick="interseccion(0)">INTERSECCION</button>
+			<ol class="listaalfa" id="listaalfa"></ol>
+		</div>
+		<div class="tabPanel" id="lengua">
+			<input type="text" class="conjunto" id="conjuntolengua" placeholder="Ingrese el lenguaje 1">
+			<input type="text" class="conjunto1" id="conjuntolengua1" placeholder="Ingrese el lenguaje 2"><br>
+			<button class="unionlengua" id="unionlengua" onclick="union(1)">UNION</button>
+			<button class="diferencialengua" id="diferencialengua" onclick="diferencia(1)">DIFERENCIA</button>
+			<button class="interseccionlengua" id="interseccionlengua" onclick="interseccion(1)">INTERSECCION</button>
+			<button class="concalengua" id="concalengua" onclick="concatenar()">CONCATENACION</button>
+			<button class="potencialengua" id="potencialengua">POTENCIA</button>
+			<button class="inversalengua" id="inversalengua" onclick="inversa(0)">INVERSA</button>
+			<button class="cardilengua" id="cardilengua" onclick="cardinalidad(0)">CARDINALIDAD</button><br><br>
+			<div class="potenciass" id="potenciass">
+				<input type="text" class="numpotencilengua" id="numpotencilengua" placeholder="Ingrese la potencia">
+				<button class="potencialengua1" id="potencialengua1" onclick="potencia(0)">LENGUAJE 1</button>
+				<button class="potencialengua1" id="potencialengua2" onclick="potencia(1)">LENGUAJE 2</button>
+			</div>
+			<ol class="listalengua" id="listalengua"></ol>
+		</div>
+		<div class="tabPanel">
+			<input type="text" class="conjunto" id="conjuntopala" placeholder="Ingrese la palabra">
+			<button class="cardinalidadpal" id="cardinalidadpal" onclick="cardinalidad(1)">CARDINALIDAD</button>
+			<button class="inversapal" id="inversapal" onclick="inversa(1)">INVERSA</button>
+			<ol class="listapala" id="listapala"></ol>
+		</div>
+	</div>
+
+	<script src="js/funcion.js"></script>
+</body>
+</html>
